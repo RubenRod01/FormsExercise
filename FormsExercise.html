@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML Forms Exercise">
+  <title>Survey</title>
+</head>
+
+<body>
+  <form>
+    <!-- Fieldset -->
+    <fieldset>
+      <legend>Customer Experience Survey</legend>
+      <!-- Select Element -->
+      <label for="store">Store Number</label>
+      <select name="store" id="store">
+        <option hidden>Select A Store</option>
+        <option value="3109">3109</option>
+        <option value="2421">2421</option>
+        <option value="5357">5357</option>
+      </select>
+      <!-- Fieldset -->
+      <fieldset>
+        <legend>When you visited:</legend>
+        <!-- Date Input -->
+        <div>
+          <label for="date">Date Visited</label>
+          <input type="date" name="date" id="date" min="2021-01-01" max="2021-12-31">
+        </div>
+        <!-- Time Input -->
+        <div>
+          <label for="time">Time</label>
+          <input type="time" name="time" id="time">
+        </div>
+      </fieldset>
+      <!-- Text Input -->
+      <div>
+        <label for="fullName">Full Name:</label>
+        <input type="text" name="fullName" id="fullName" placeholder="Name">
+      </div>
+      <!-- Email Input -->
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Email">
+      </div>
+      <!-- Fieldset -->
+      <fieldset>
+        <legend>Gender</legend>
+        <!-- Radio Inputs -->
+        <div>
+          <input type="radio" id="male" name="gender" value="Male">
+          <label for="male">Male</label>
+        </div>
+        <div>
+          <input type="radio" id="female" name="gender" value="Female" checked>
+          <label for="female">Female</label>
+        </div>
+      </fieldset>
+      <!-- Textarea -->
+      <div>
+        <label for="textarea">Tell us about your experience</label>
+        <br>
+        <textarea name="textarea" id="textarea" cols="20" rows="2"></textarea>
+      </div>
+      <!-- Number Input -->
+      <div>
+        <label for="number">Times visited in the last month:</label>
+        <br>
+        <input type="number" name="number" id="number" min="1" max="30">
+      </div>
+      <!-- Checkbox Input -->
+      <div>
+        <input type="checkbox" name="checkbox" id="checkbox" required>
+        <label for="checkbox">Please check the box if you would be willing to be contacted about your experience</label>
+      </div>
+      <!-- Password Input -->
+      <div>
+        <label for="password">Password</label>
+        <!-- <input type="password" id="password" name="password" pattern=".{5,10}" title="Please enter a password that is 5 to 10 characters in length"> -->
+        <input type="password" id="password" name="password" minlength="5" maxlength="10" oninvalid="Please enter a password that is 5 to 10 characters in length">
+      </div>
+      <!-- Reset Input -->
+      <input type="reset">
+      <!-- Submit Input -->
+      <input type="submit">
+    </fieldset>
+  </form>
+</body>
+
+</html>
